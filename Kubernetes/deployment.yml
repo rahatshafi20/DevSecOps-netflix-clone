@@ -18,16 +18,3 @@ spec:
         image: 22i1061/netflix:latest 
         ports:
         - containerPort: 80
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: netflix-app-service
-  namespace: default
-spec:
-  type: LoadBalancer
-  selector:
-    app: netflix-app
-  ports:
-  - port: 80
-    targetPort: 80
